@@ -5,9 +5,6 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install --no
     pip install poetry && \
     apt install direnv
 
-    execution,
-    testing,
-    documentation,
-    integration,
-    deploying
-    PR review
+RUN poetry install
+
+    
