@@ -1,0 +1,25 @@
+name: "Unit test"
+
+on:
+  push:
+
+jobs:
+  unit-test:
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+      - name: install dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install Poetry
+        run: |
+          pip install poetry
+          poetry install
+      - name: Unit Testing
+        run: |
+          poetry run pytest -s -m unit
