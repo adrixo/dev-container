@@ -10,3 +10,11 @@ repos:
         always_run: true
         stages: [commit]
 
+      - id: unit-testing
+        verbose: true
+        name: pytest-check
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [push]
