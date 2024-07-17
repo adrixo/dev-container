@@ -1,7 +1,6 @@
 {
-	"build": {
-		"context": "..",
-		"dockerfile": "./Dockerfile"
-	},
-	"postCreateCommand": "bash ./.devcontainer/post-install.sh"
+	"name": "Python 3 & PostgreSQL",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace"
 }
