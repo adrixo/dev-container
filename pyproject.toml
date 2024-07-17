@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "best-api"
+name = "api"
 version = "0.1.0"
 description = ""
 authors = ["adrixo <adrianvalrom@gmail.com>"]
@@ -11,6 +11,9 @@ python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.7.1"
+
+[tool.poetry.scripts]
+api = "api.main:main"
 
 [build-system]
 requires = ["poetry-core"]
