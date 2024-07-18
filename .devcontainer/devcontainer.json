@@ -4,4 +4,5 @@
 	"service": "app",
 	"workspaceFolder": "/workspace",
 	"postCreateCommand": "bash .devcontainer/post-install.sh",
+	"forwardPorts": ["8080", "5000"]
 }
